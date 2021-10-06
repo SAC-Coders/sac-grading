@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import NavigationBar from './components/NavigationBar'
+import ApplicationView from './components/ApplicationView'
+import { Container } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import config from './config'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import Footer from './components/Footer'
+import Login from './components/Login'
+import collage from "./media/sac-collage.jpg"
+import AuthProvider from './components/Auth'
+import PrivateRoute from './components/PrivateRoute'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const HomePage = () => {
+  return (<div className="App">
+    <Container fluid>
+      <NavigationBar />
+    </Container>
+    <Container fluid className="content">
+      <Switch>
+        <Route exact path="/">
+          <div className="text-center">Select grading view (membership/scholarship) and enter application ID to get started</div>
+          <img
+            src={collage}
+            alt="SAC Collage"
+            className="w-50"
+            style={{ maxWidth: '50rem', margin: 'auto', display: 'block' }}
+          />
+        </Route>
+        <Route path="/membership/:id">
+          <ApplicationView view='membership' collection={'scholarship20-21'} form_url={config.membership_form} enabled={true} />
+        </Route>
+        <Route path="/scholarship/:id">
+          <ApplicationView view='scholarship' collection={'scholarship' + config.school_year} form_url={config.scholarship_form} enabled={false} />
+        </Route>
+      </Switch>
+    </Container>
+  </div>)
 }
 
-export default App;
+const App = () => {
+
+  return (
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/login" component={Login} />
+          <PrivateRoute path="/" component={HomePage} />
+        </Switch>
+        <Footer />
+      </Router >
+    </AuthProvider>
+
+  )
+}
+
+
+export default App

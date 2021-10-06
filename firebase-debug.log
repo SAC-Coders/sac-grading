@@ -1,0 +1,64 @@
+[debug] [2021-10-04T19:40:49.619Z] ----------------------------------------------------------------------
+[debug] [2021-10-04T19:40:49.623Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jbonn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-10-04T19:40:49.623Z] CLI Version:   9.19.0
+[debug] [2021-10-04T19:40:49.624Z] Platform:      win32
+[debug] [2021-10-04T19:40:49.624Z] Node Version:  v14.18.0
+[debug] [2021-10-04T19:40:49.625Z] Time:          Mon Oct 04 2021 15:40:49 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-10-04T19:40:49.626Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-04T19:40:49.741Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-04T19:40:49.741Z] > authorizing via signed-in user (osusacer@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jbonn\dev\websites\sac-grading
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using sac-grading-c9c32. 
+[debug] [2021-10-04T19:41:10.232Z] > refreshing access token with scopes: []
+[debug] [2021-10-04T19:41:10.233Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-04T19:41:10.430Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Mon, 04 Oct 2021 19:41:09 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-04T19:41:10.448Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sac-grading-c9c32 [none]
+[debug] [2021-10-04T19:41:10.740Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sac-grading-c9c32 200
+[debug] [2021-10-04T19:41:10.740Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sac-grading-c9c32 {"projectId":"sac-grading-c9c32","projectNumber":"491230449789","displayName":"sac-grading","name":"projects/sac-grading-c9c32","resources":{"hostingSite":"sac-grading-c9c32","storageBucket":"sac-grading-c9c32.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+=== Firestore Setup
+[debug] [2021-10-04T19:41:10.743Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-04T19:41:10.743Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-04T19:41:10.834Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 04 Oct 2021 19:41:10 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-04T19:41:10.851Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/sac-grading-c9c32/services/firestore.googleapis.com  
+ 
+[debug] [2021-10-04T19:41:11.263Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Oct 2021 19:41:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-04T19:41:11.264Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/sac-grading-c9c32  
+ 
+[debug] [2021-10-04T19:41:11.465Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Oct 2021 19:41:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-04T19:41:11.466Z] database_type: CLOUD_FIRESTORE
+[debug] [2021-10-04T19:41:11.467Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-04T19:41:11.468Z] > authorizing via signed-in user (osusacer@gmail.com)
+[debug] [2021-10-04T19:41:11.468Z] [iam] checking project sac-grading-c9c32 for permissions ["firebase.projects.get"]
+[debug] [2021-10-04T19:41:11.468Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/sac-grading-c9c32:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-10-04T19:41:11.654Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Oct 2021 19:41:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=43","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
