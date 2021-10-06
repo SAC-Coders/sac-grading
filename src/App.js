@@ -1,14 +1,15 @@
 import NavigationBar from './components/NavigationBar'
 import ApplicationView from './components/ApplicationView'
 import { Container } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import config from './config'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import collage from "./media/sac-collage.jpg"
 import AuthProvider from './components/Auth'
 import PrivateRoute from './components/PrivateRoute'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 const HomePage = () => {
   return (<div className="App">

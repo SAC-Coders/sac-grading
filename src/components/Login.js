@@ -4,6 +4,7 @@ import { auth } from "../firebase.config"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { AuthContext } from "./Auth";
 import { Redirect, withRouter } from "react-router";
+import config from "../config"
 
 const Login = ({ history }) => {
 
@@ -13,7 +14,7 @@ const Login = ({ history }) => {
       const password = e.target[0].value
 
       try {
-        await signInWithEmailAndPassword(auth, "osusacer@gmail.com", password)
+        await signInWithEmailAndPassword(auth, config.sac_email, password)
         history.push("/")
       } catch (error) {
         if (password.length === 0) {
