@@ -3,8 +3,10 @@ const config = {
   membership_contact: "Kayli Bardy (bardy.2@osu.edu)",
   website_contact: "Jeff Bonner (bonner.174@osu.edu)",
   sac_email: "osusacer@gmail.com",
-  membership_form: 'https://imaninja.com/',
-  scholarship_form: 'https://imaninja.com/',
+  membership_enabled: true,
+  scholarship_enabled: false,
+  membership_form: 'https://docs.google.com/forms/d/e/1FAIpQLSdtwVoIoOadLyTTKQzfp6saVUK4y3OFntRekAKFc5iURJlVWA/viewform',
+  scholarship_form: '',
 }
 
 export default config

@@ -22,10 +22,16 @@ const toCard = (question, response) => {
 const formatApplication = (questions, application) => {
   return (
     <>
-      {toCard(questions.personal_email, application.gpa)}
-      {toCard(questions.name, application.name)}
+      {toCard(questions.campus, application.campus)}
       {toCard(questions.year, application.year)}
-      {toCard(questions.graduation, application.graduation)}
+      {toCard(questions.major, application.major)}
+      {toCard(questions.gpa, application.gpa)}
+      {toCard(questions.graduation_date, application.graduation_date)}
+      {toCard(questions.info_session, application.info_session)}
+      {toCard(questions.retreat, application.retreat)}
+      {toCard(questions.question1, application.question1)}
+      {toCard(questions.question2, application.question2)}
+      {toCard(questions.question3, application.question3)}
     </>
   )
 }
@@ -69,7 +75,7 @@ const ApplicationView = (props) => {
   }
   return (
     props.enabled ?
-      <Row>
+      <Row className="mb-5">
         <Col>
           <Container fluid>
             {getApplication()}

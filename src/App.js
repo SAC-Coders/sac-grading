@@ -28,10 +28,10 @@ const HomePage = () => {
           />
         </Route>
         <Route path="/membership/:id">
-          <ApplicationView view='membership' collection={'scholarship20-21'} form_url={config.membership_form} enabled={true} />
+          <ApplicationView view='membership' collection={'membership' + config.school_year} form_url={config.membership_form} enabled={config.membership_enabled} />
         </Route>
         <Route path="/scholarship/:id">
-          <ApplicationView view='scholarship' collection={'scholarship' + config.school_year} form_url={config.scholarship_form} enabled={false} />
+          <ApplicationView view='scholarship' collection={'scholarship' + config.school_year} form_url={config.scholarship_form} enabled={config.scholarship_enabled} />
         </Route>
       </Switch>
     </Container>
