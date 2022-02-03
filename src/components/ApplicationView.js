@@ -6,7 +6,7 @@ import { db } from '../firebase.config'
 import GoogleForm from './GoogleForm'
 
 
-const toCard = (question, response) => {
+const toCard = (question, response, wordCount = 0) => {
   return (
     <Card border="light" className="mb-3">
       <Card.Header>{question}</Card.Header>
@@ -14,6 +14,7 @@ const toCard = (question, response) => {
         <Card.Text>
           {response}
         </Card.Text>
+        {wordCount !== 0 && <Card.Subtitle className="mb-3 text-muted">Word Count: {wordCount}</Card.Subtitle>}
       </Card.Body>
     </Card>
   )
@@ -31,9 +32,9 @@ const formatApplication = (questions, application, membershipOrScholarship) => {
         {toCard(questions.graduation_date, application.graduation_date)}
         {toCard(questions.info_session, application.info_session)}
         {toCard(questions.retreat, application.retreat)}
-        {toCard(questions.question1, application.question1)}
-        {toCard(questions.question2, application.question2)}
-        {toCard(questions.question3, application.question3)}
+        {toCard(questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
+        {toCard(questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
+        {toCard(questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
       </>
     )
   } else 
@@ -45,10 +46,10 @@ const formatApplication = (questions, application, membershipOrScholarship) => {
         {toCard(questions.gpa, application.gpa)}
         {toCard(questions.graduation_date, application.graduation_date)}
         {toCard(questions.english, application.english)}
-        {toCard(questions.question1, application.question1)}
-        {toCard(questions.question2, application.question2)}
-        {toCard(questions.question3, application.question3)}
-        {toCard(questions.question4, application.question4)}
+        {toCard(questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
+        {toCard(questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
+        {toCard(questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
+        {toCard(questions.question4, application.question4, application.question4 === undefined ? 0 : application.question4.trim().split(" ").length)}
       </>
     )
   }
