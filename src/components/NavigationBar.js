@@ -2,11 +2,12 @@ import { useState } from 'react'
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Container } from 'react-bootstrap'
 import icon from "../media/icon-red.png"
 import { useHistory } from 'react-router-dom';
+import config from '../config';
 
 
 const NavigationBar = (props) => {
 
-  const [gradingView, setGradingView] = useState("Membership")
+  const [gradingView, setGradingView] = useState(config.default_view)
 
   const history = useHistory();
 
