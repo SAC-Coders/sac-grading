@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { doc, getDoc } from "firebase/firestore"
 import { db } from '../firebase.config'
 import GoogleForm from './GoogleForm'
-
+import config from '../config';
 
 const toCard = (question, response, wordCount = 0) => {
   return (
@@ -14,7 +14,7 @@ const toCard = (question, response, wordCount = 0) => {
         <Card.Text>
           {response}
         </Card.Text>
-        {wordCount !== 0 && <Card.Subtitle className="mb-3 text-muted">Word Count: {wordCount}</Card.Subtitle>}
+        {wordCount !== 0 && <Card.Subtitle className={wordCount <= config.question_word_limit ? "text-muted" : "text-danger"}>Word Count: {wordCount} / {config.question_word_limit}</Card.Subtitle>}
       </Card.Body>
     </Card>
   )
