@@ -1,17 +1,22 @@
 @import "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700";
 * {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
 }
 
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+#app-form {
+    position: sticky;
+    height: 95vh;
+    top: 10px;
+    padding: 2%;
+}

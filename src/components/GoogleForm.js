@@ -1,8 +1,8 @@
 
 const GoogleForm = (props) => {
   return (
-    <div>
-      <iframe height="2000" width="98%" src={props.url} title="Grading Form" frameBorder="0" ></iframe>
+    <div id="app-form">
+      <iframe height="100%" width="100%" src={props.url} title="Grading Form" frameBorder="0" ></iframe>
     </div>
   )
 }

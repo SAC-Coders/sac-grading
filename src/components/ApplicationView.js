@@ -22,7 +22,7 @@ const toCard = (question, response, wordCount = 0) => {
 
 const formatApplication = (questions, application, membershipOrScholarship) => {
 
-  if(membershipOrScholarship === 'membership') {
+  if (membershipOrScholarship === 'membership') {
     return (
       <>
         {toCard(questions.campus, application.campus)}
@@ -37,22 +37,22 @@ const formatApplication = (questions, application, membershipOrScholarship) => {
         {toCard(questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
       </>
     )
-  } else 
-  if(membershipOrScholarship === 'scholarship') {
-    return (
-      <>
-        {toCard(questions.year, application.year)}
-        {toCard(questions.major, application.major)}
-        {toCard(questions.gpa, application.gpa)}
-        {toCard(questions.graduation_date, application.graduation_date)}
-        {toCard(questions.english, application.english)}
-        {toCard(questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
-        {toCard(questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
-        {toCard(questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
-        {toCard(questions.question4, application.question4, application.question4 === undefined ? 0 : application.question4.trim().split(" ").length)}
-      </>
-    )
-  }
+  } else
+    if (membershipOrScholarship === 'scholarship') {
+      return (
+        <>
+          {toCard(questions.year, application.year)}
+          {toCard(questions.major, application.major)}
+          {toCard(questions.gpa, application.gpa)}
+          {toCard(questions.graduation_date, application.graduation_date)}
+          {toCard(questions.english, application.english)}
+          {toCard(questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
+          {toCard(questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
+          {toCard(questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
+          {toCard(questions.question4, application.question4, application.question4 === undefined ? 0 : application.question4.trim().split(" ").length)}
+        </>
+      )
+    }
 }
 
 
@@ -96,7 +96,7 @@ const ApplicationView = (props) => {
     props.enabled ?
       <Row className="mb-5">
         <Col>
-          <Container fluid>
+          <Container fluid id="app-view">
             {getApplication()}
           </Container>
         </Col>
