@@ -32,9 +32,9 @@ const formatApplication = (questions, application, membershipOrScholarship) => {
         {toCard(questions.graduation_date, application.graduation_date)}
         {toCard(questions.info_session, application.info_session)}
         {toCard(questions.retreat, application.retreat)}
-        {toCard(questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
-        {toCard(questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
-        {toCard(questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
+        {toCard("(Q1) " + questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
+        {toCard("(Q2) " + questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
+        {toCard("(Q3) " + questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
       </>
     )
   } else
@@ -46,10 +46,10 @@ const formatApplication = (questions, application, membershipOrScholarship) => {
           {toCard(questions.gpa, application.gpa)}
           {toCard(questions.graduation_date, application.graduation_date)}
           {toCard(questions.english, application.english)}
-          {toCard(questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
-          {toCard(questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
-          {toCard(questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
-          {toCard(questions.question4, application.question4, application.question4 === undefined ? 0 : application.question4.trim().split(" ").length)}
+          {toCard("(Q1) " + questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
+          {toCard("(Q2) " + questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
+          {toCard("(Q3) " + questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
+          {toCard("(Q4) " + questions.question4, application.question4, application.question4 === undefined ? 0 : application.question4.trim().split(" ").length)}
         </>
       )
     }
