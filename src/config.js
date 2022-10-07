@@ -1,6 +1,6 @@
 const config = {
     school_year: '22-23',
-    membership_contact: "Kayli Bardy (bardy.2@osu.edu)",
+    membership_contact: "Sophia LaBianco (labianco.1@osu.edu)",
     scholarship_contact: "Caroline Smith (smith.12364@osu.edu)",
     website_contact: "Owen White (white.3629@osu.edu)",
     sac_email: "osusacer@gmail.com",

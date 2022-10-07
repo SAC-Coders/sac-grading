@@ -28,7 +28,7 @@ const formatApplication = (questions, application, membershipOrScholarship) => {
         {toCard(questions.campus, application.campus)}
         {toCard(questions.year, application.year)}
         {toCard(questions.major, application.major)}
-        {toCard(questions.gpa, application.gpa)}
+        {/* {toCard(questions.gpa, application.gpa)} */}
         {toCard(questions.graduation_date, application.graduation_date)}
         {toCard(questions.info_session, application.info_session)}
         {toCard(questions.retreat, application.retreat)}
