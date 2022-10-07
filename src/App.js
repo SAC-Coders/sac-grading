@@ -24,7 +24,7 @@ const HomePage = () => {
             src={group_picture}
             alt="SAC Group Picture"
             className="w-50"
-            style={{ maxWidth: '50rem', margin: 'auto', display: 'block' }}
+            style={{ maxWidth: '50rem', margin: 'auto', padding: '20px 0px 0px 0px', display: 'block' }}
           />
         </Route>
         <Route path="/membership/:id">
