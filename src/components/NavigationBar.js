@@ -41,7 +41,7 @@ const NavigationBar = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavDropdown title={`SAC ${gradingView} Application Grading 2021-22`} id="basic-nav-dropdown">
+            <NavDropdown title={`SAC ${gradingView} Application Grading ${config.school_year}`} id="basic-nav-dropdown">
               <NavDropdown.Item onClick={() => setGradingView("Membership")}>Membership</NavDropdown.Item>
               <NavDropdown.Item onClick={() => setGradingView("Scholarship")}>Scholarship</NavDropdown.Item>
             </NavDropdown>

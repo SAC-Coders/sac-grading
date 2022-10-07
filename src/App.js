@@ -5,7 +5,7 @@ import config from './config'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Footer from './components/Footer'
 import Login from './components/Login'
-import collage from "./media/sac-collage.jpg"
+import group_picture from "./media/sac-group-picture.jpg"
 import AuthProvider from './components/Auth'
 import PrivateRoute from './components/PrivateRoute'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -21,8 +21,8 @@ const HomePage = () => {
         <Route exact path="/">
           <div className="text-center">Select grading view (membership/scholarship) and enter application ID to get started</div>
           <img
-            src={collage}
-            alt="SAC Collage"
+            src={group_picture}
+            alt="SAC Group Picture"
             className="w-50"
             style={{ maxWidth: '50rem', margin: 'auto', display: 'block' }}
           />
