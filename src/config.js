@@ -8,7 +8,7 @@ const config = {
     scholarship_enabled: false,
     default_view: "Membership",
     question_word_limit: 350,
-    membership_form: 'https://docs.google.com/forms/d/e/1FAIpQLSdtwVoIoOadLyTTKQzfp6saVUK4y3OFntRekAKFc5iURJlVWA/viewform',
+    membership_form: 'https://docs.google.com/forms/d/e/1FAIpQLSe0RZ7couOPmduMzEkEoD2g8MoooSHvsw0YBX0Hb_D0Idwhrg/viewform?usp=sf_link',
     scholarship_form: '',
 }
 
