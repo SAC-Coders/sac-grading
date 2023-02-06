@@ -36,7 +36,7 @@ const Footer = () => {
 
     <div style={footerStyle}>
       {getFooter()}
-      <span className="justify-content-center"> Contact {config.website_contact} for website issues. </span>
+      <span className="justify-content-center"> Contact {config.website_contact} for website issues. Website created by Jeff Bonner.</span>
       <Button variant="secondary" disabled={!currentUser} onClick={() => signOut(auth)} style={{ float: 'left', fontSize: '12px', padding: '1px 4px' }}>Log Out</Button>
     </div >
 

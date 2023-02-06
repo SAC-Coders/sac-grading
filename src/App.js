@@ -22,7 +22,7 @@ const HomePage = () => {
           <div className="text-center">Select grading view (membership/scholarship) and enter application ID to get started</div>
           <img
             src={group_picture}
-            alt="SAC Group Picture"
+            alt="SAC Collage"
             className="w-50"
             style={{ maxWidth: '50rem', margin: 'auto', padding: '20px 0px 0px 0px', display: 'block' }}
           />
