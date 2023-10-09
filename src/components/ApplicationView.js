@@ -6,7 +6,7 @@ import { db } from '../firebase.config'
 import GoogleForm from './GoogleForm'
 import config from '../config';
 
-const toCard = (question, response, wordCount = 0) => {
+const toCard = (question, response, wordCount = 0, customWordLimit = config.question_word_limit) => {
   return (
     <Card border="light" className="mb-3">
       <Card.Header>{question}</Card.Header>
@@ -14,11 +14,12 @@ const toCard = (question, response, wordCount = 0) => {
         <Card.Text>
           {response}
         </Card.Text>
-        {wordCount !== 0 && <Card.Subtitle className={wordCount <= config.question_word_limit ? "text-muted" : "text-danger"}>Word Count: {wordCount} / {config.question_word_limit}</Card.Subtitle>}
+        {wordCount !== 0 && <Card.Subtitle className={wordCount <= customWordLimit ? "text-muted" : "text-danger"}>Word Count: {wordCount} / {customWordLimit}</Card.Subtitle>}
       </Card.Body>
     </Card>
   )
 }
+
 
 const formatApplication = (questions, application, membershipOrScholarship) => {
 
@@ -34,7 +35,7 @@ const formatApplication = (questions, application, membershipOrScholarship) => {
         {toCard(questions.retreat, application.retreat)}
         {toCard("(Q1) " + questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
         {toCard("(Q2) " + questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
-        {toCard("(Q3) " + questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
+        {toCard("(Q3) " + questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length, 150)}
       </>
     )
   } else

@@ -7,7 +7,7 @@ const config = {
     membership_enabled: true,
     scholarship_enabled: false,
     default_view: "Scholarship",
-    question_word_limit: 350,
+    question_word_limit: 300,
     membership_form: 'https://forms.gle/FnVna5FtL2uYGTaM9',
     scholarship_form: 'https://forms.gle/Fs4WQMSpB8xo4qBbA',
 }
