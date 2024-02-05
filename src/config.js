@@ -9,7 +9,7 @@ const config = {
     default_view: "Scholarship",
     question_word_limit: 300,
     membership_form: 'https://forms.gle/FnVna5FtL2uYGTaM9',
-    scholarship_form: 'https://docs.google.com/forms/d/1vuW9V8geyvsMf0y9RcyP_dMhDPTqkT01zjcJzi7wXvY/edit',
+    scholarship_form: 'https://docs.google.com/forms/d/e/1FAIpQLSc9fu9QmlgmXmzXJIDA4qmeYHIsYuZXL9ck8pTgSrLYM4iyAw/viewform',
 }
 
 export default config
