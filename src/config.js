@@ -4,7 +4,7 @@ const config = {
     scholarship_contact: "Aaron	Gillespie (Gillespie.374@buckeyemail.osu.edu)",
     website_contact: "Gabe Petrarca (petrarca.26@osu.edu)",
     sac_email: "osusacer@gmail.com",
-    membership_enabled: false,
+    membership_enabled: true,
     scholarship_enabled: true,
     default_view: "Scholarship",
     question_word_limit: 300,
