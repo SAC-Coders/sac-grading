@@ -1,5 +1,5 @@
 const config = {
-    school_year: '23-24',
+    school_year: '24-25',
     membership_contact: "Rachel Ostavitz (Ostavitz.2@osu.edu)",
     scholarship_contact: "Aaron	Gillespie (Gillespie.374@buckeyemail.osu.edu)",
     website_contact: "Gabe Petrarca (petrarca.26@osu.edu)",
