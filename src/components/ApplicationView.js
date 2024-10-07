@@ -35,7 +35,7 @@ const formatApplication = (questions, application, membershipOrScholarship) => {
         {toCard(questions.retreat, application.retreat)}
         {toCard("(Q1) " + questions.question1, application.question1, application.question1 === undefined ? 0 : application.question1.trim().split(" ").length)}
         {toCard("(Q2) " + questions.question2, application.question2, application.question2 === undefined ? 0 : application.question2.trim().split(" ").length)}
-        {toCard("(Q3) " + questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length)}
+        {toCard("(Q3) " + questions.question3, application.question3, application.question3 === undefined ? 0 : application.question3.trim().split(" ").length, 200)}
       </>
     )
   } else
